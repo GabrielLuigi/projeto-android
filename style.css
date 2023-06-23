@@ -7,7 +7,13 @@
     src: url(fontes/idroid.otf) format('opentype');
     font-weight: normal;
 }
-
+@font-face {
+    font-family: 'fonte android';
+    src: url(idroid.otf)
+    format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
 * {
     margin: 0px;
     padding: 0px;
@@ -24,7 +30,17 @@
     --fonte-destaque: 'Bebas Neue', cursive;
     --fonte-andorid: 'android', cursive;
 }
-
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+a.externos:after{
+    content: '\00a0\1F517';
+}
+h1 {
+    font-family: 'fonte android', times, serif;
+    font-weight: normal;
+}
 header { 
     background-image: linear-gradient(to bottom, #37C576, #1A5C38);
     min-height: 150px;
@@ -32,13 +48,6 @@ header {
     font-style: normal;
     text-align: center;
     font-family: var(--fonte-padrao);
-}
-body {
-    background-color: var(--cor0);
-    font-family: var(--fonte-padrao);
-}
-a.externos:after{
-    content: '\00a0\1F517';
 }
 header > h1 {
     color: white;
@@ -76,17 +85,6 @@ nav > a:hover {
     background-color: var(--cor2);
     color: var(--cor4);
 }
-@font-face {
-    font-family: 'fonte android';
-    src: url(idroid.otf)
-    format(opentype);
-    font-weight: normal;
-    font-style: normal;
-}
-h1 {
-    font-family: 'fonte android', times, serif;
-    font-weight: normal;
-}
 main h1 {
     color: var(--cor4);
     font-family: var(--fonte-andorid);
@@ -110,22 +108,6 @@ main {
     margin-bottom: 30px;
     padding: 20px;
     border-radius: 0px 0px 10px 10px;
-}
-div.video {
-    background-color: var(--cor4);
-    margin: 0px -20px 30px -20px;
-    padding: 20px;
-    padding-bottom: 57.5%;
-    position: relative;
-
-}
-
-div.video > iframe {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
 }
 main img {
     width: 100%;
@@ -156,6 +138,22 @@ main p {
     text-indent: 30px;
     line-height: 2em;
     font-size: 1em;
+}
+div.video {
+    background-color: var(--cor4);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 57.5%;
+    position: relative;
+
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
 }
 iframe {
     background-color: #1A5C38;
